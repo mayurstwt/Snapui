@@ -12,16 +12,16 @@ import SimpleNavbarTwo from "./Navbars/SimpleNavbarTwo/page";
 export default function Home() {
   return (<>
     <div className="flex flex-col gap-y-40">
-    <SimpleNavbarFour/>
-    <SimpleNavbarThree/>
-    <SimpleNavbarTwo/>
-    <SimpleNavbarOne />
-    <SimpleNavbarFive/>
+    {/* <SimpleNavbarFour/> */}
+    {/* <SimpleNavbarThree/> */}
+    {/* <SimpleNavbarTwo/> */}
+    {/* <SimpleNavbarOne /> */}
+    {/* <SimpleNavbarFive/> */}
     <SimpleNavbarSix/>
-    <SimpleNavbarSeven/>
-    <SimpleNavbarEight/>
-    <SimpleNavbarNine/>
-    <SimpleNavbarTen/>
+    {/* <SimpleNavbarSeven/> */}
+    {/* <SimpleNavbarEight/> */}
+    {/* <SimpleNavbarNine/> */}
+    {/* <SimpleNavbarTen/> */}
     </div>
   </>)
 }

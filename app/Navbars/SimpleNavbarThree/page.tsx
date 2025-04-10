@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { cn } from "@/app/lib/utils";
 import { Search, ShoppingCart, Heart, Menu, Bell } from "lucide-react";
+import Link from "next/link";
 
 const navLinks = [
   { label: "Men", href: "#men" },
@@ -85,7 +86,7 @@ export default function SimpleNavbarThree() {
             </div>
             
             <div className="flex-1 flex justify-center">
-              <a href="/" className="text-2xl font-bold tracking-tight">MONOSTORE</a>
+              <Link href="/" className="text-2xl font-bold tracking-tight">MONOSTORE</Link>
             </div>
             
             <div className="flex items-center gap-3">
