@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Montserrat } from 'next/font/google';
+import SimpleNavbarOne from '@/app/Navbars/SimpleNavbarOne/page';
 
 // Initialize the Montserrat font
 const montserrat = Montserrat({ 
@@ -14,7 +15,8 @@ const SimpleHeroFive: React.FC = () => {
     <>
     <div className={`min-h-screen w-full bg-gradient-to-b from-black via-purple-900 to-white flex flex-col items-center justify-center px-4 md:px-8 lg:px-16 ${montserrat.variable} font-sans overflow-hidden`}>
       {/* Content Container with increased vertical margin */}
-      <div className="text-center max-w-7xl mx-auto z-10 mb-10 mt-24"> 
+      <SimpleNavbarOne/>
+      <div className="text-center max-w-7xl mx-auto z-10 mb-10 mt-44"> 
         {/* Extra large heading - 7 words split across 2 lines */}
         <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-8 text-white tracking-tight">
           <span className="block">Transform Your Digital Experience</span>
