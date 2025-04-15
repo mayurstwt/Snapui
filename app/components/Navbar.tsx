@@ -52,7 +52,7 @@ export default function NavbarComponent() {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="lg:flex items-center justify-center hidden">
+                    {/* <div className="lg:flex items-center justify-center hidden">
                         <nav className="flex gap-8 font-medium text-zinc-300">
                             {navLinks.map((link) => (
                                 <a
@@ -64,11 +64,11 @@ export default function NavbarComponent() {
                                 </a>
                             ))}
                         </nav>
-                    </div>
+                    </div> */}
 
                     {/* Hamburger + Buttons */}
                     <div className="flex items-center gap-4 relative" ref={menuRef}>
-                        <button
+                        {/* <button
                             className="lg:hidden text-zinc-400 hover:text-white transition-colors"
                             onClick={() => setMenuOpen((prev) => !prev)}
                             aria-label="Toggle Menu"
@@ -84,17 +84,14 @@ export default function NavbarComponent() {
                                     </>
                                 )}
                             </svg>
-                        </button>
+                        </button> */}
 
                         <Button className="p-2 bg-transparent text-purple-200 border-2 border-purple-400 text-lg font-medium rounded-lg hover:bg-purple-800 hover:bg-opacity-30 transition-colors">
                             Sign in
                         </Button>
-                        <Button className="p-2 bg-purple-600 text-white text-lg font-medium rounded-lg hover:bg-purple-700 transition-colors shadow-lg">
-                            Get started
-                        </Button>
 
                         {/* Mobile Navigation */}
-                        {menuOpen && (
+                        {/* {menuOpen && (
                             <div className="absolute right-0 top-12 bg-zinc-900 border border-zinc-800 rounded-lg w-56 py-4 shadow-xl lg:hidden z-50">
                                 <nav className="flex flex-col">
                                     {navLinks.map((link) => (
@@ -108,7 +105,7 @@ export default function NavbarComponent() {
                                         </a>
                                     ))}
                                     <hr className="my-2 border-zinc-800" />
-                                    <div className="px-4 pt-2 space-y-2">
+                                    <div className="px-4 pt-2 space-y-2 ">
                                         <Button variant="secondary" className="w-full block text-center" onClick={handleMenuClick}>
                                             Sign in
                                         </Button>
@@ -118,7 +115,7 @@ export default function NavbarComponent() {
                                     </div>
                                 </nav>
                             </div>
-                        )}
+                        )} */}
                     </div>
                 </div>
             </div>

@@ -1,6 +1,5 @@
 "use client"
 
-
 import { Montserrat } from 'next/font/google';
 import Link from 'next/link'; // Import Link from Next.js
 import ComponentCard from "@/app/components/ComponentCard";
@@ -21,7 +20,6 @@ export default function HomePage() {
 
     return (
         <div className={`min-h-screen w-full bg-gradient-to-b from-black via-purple-900 to-black flex flex-col items-center justify-center px-4 md:px-8 lg:px-16 ${montserrat.variable} font-sans overflow-hidden`}>
-            <NavbarComponent />
             <div className="text-center max-w-7xl mx-auto z-10 mb-10 mt-44">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-8 text-white tracking-tight">
                     <span className="block">Transform Experience</span>

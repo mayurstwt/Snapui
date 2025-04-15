@@ -19,20 +19,17 @@ function Components() {
   };
 
   return (
-    <div className="min-h-screen text-gray-100 font-poppins relative bg-gradient-to-br from-[#554226] via-[#03162D] to-[#020210]">
+    <div className="min-h-screen text-gray-100 font-poppins relative  bg-gradient-to-b from-black via-purple-900 to-black">
       {/* Header */}
-      <header className="border-b border-gray-800/30 bg-black/50 md:py-4 backdrop-blur-sm fixed top-0 w-full z-50">
+      <header className=" fixed top-0 w-full z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <button 
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              className="md:hidden text-indigo-400 hover:text-indigo-300 transition-colors"
+              className="md:hidden text-indigo-400 hover:text-indigo-300 transition-colors absolute right-33 top-7"
             >
               {isSidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
-            <h1 className="text-4xl font-bold text-center font-space-grotesk bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400 absolute left-1/2 -translate-x-1/2">
-              Snap UI
-            </h1>
             <div className="w-6 md:hidden" /> {/* Spacer for centering */}
           </div>
         </div>
