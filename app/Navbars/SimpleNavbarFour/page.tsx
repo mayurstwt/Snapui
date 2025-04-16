@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { cn } from "@d/lib/utils";
+import { cn } from "@/lib/utils";
 import { Menu, X, MoonStar, Sun, Github, Twitter, Code } from "lucide-react";
 
 const navLinks = [
