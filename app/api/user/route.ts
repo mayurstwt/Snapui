@@ -30,7 +30,8 @@ export async function POST(request: Request) {
             },
         });
 
-        return NextResponse.json({ user: newUser, message: 'User created successfully' }, { status: 201 });
+        const { password: newUserPassword, ...user } = newUser;
+        return NextResponse.json({ user: user, message: 'User created successfully' }, { status: 201 });
     } catch (error) {
         console.error('Error in POST /api/register:', error);
         return NextResponse.json({ user: null, message: 'Something went wrong' }, { status: 500 });
