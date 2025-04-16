@@ -11,7 +11,7 @@ import {
     Lock,
     LucideIcon,
 } from "lucide-react";
-import { cn } from "@/app/lib/utils";
+import { cn } from "@/lib/lib/utils";
 
 const TechBento = () => {
     return (

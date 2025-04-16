@@ -4,13 +4,14 @@
 import { useState, useEffect, useRef } from "react";
 import React, { HTMLAttributes } from 'react';
 import { cva } from "class-variance-authority";
+import Link from "next/link";
 
-const navLinks = [
-    { label: "Solutions", href: "#solutions" },
-    { label: "Products", href: "#products" },
-    { label: "Developers", href: "#developers" },
-    { label: "Resources", href: "#resources" },
-];
+// const navLinks = [
+//     { label: "Solutions", href: "#solutions" },
+//     { label: "Products", href: "#products" },
+//     { label: "Developers", href: "#developers" },
+//     { label: "Resources", href: "#resources" },
+// ];
 
 export default function NavbarComponent() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -44,12 +45,12 @@ export default function NavbarComponent() {
         <section className="fixed py-2 top-0 z-50 w-full">
             <div className="mx-auto max-w-7xl px-4 xl:px-0">
                 <div className="flex justify-between px-4 items-center bg-black py-3 rounded-lg">
-                    <div className="flex items-center space-x-2">
+                    <Link className="flex items-center space-x-2" href="/">
                         <div className="w-8 h-8 bg-violet-500 rounded-md flex items-center justify-center">
-                            <span className="font-bold text-white">T</span>
+                            <span className="font-bold text-white">S</span>
                         </div>
-                        <span className="font-semibold text-white">TechFlow</span>
-                    </div>
+                        <span className="font-semibold text-white text-2xl ml-2">Snap UI</span>
+                    </Link>
 
                     {/* Desktop Navigation */}
                     {/* <div className="lg:flex items-center justify-center hidden">
@@ -86,9 +87,9 @@ export default function NavbarComponent() {
                             </svg>
                         </button> */}
 
-                        <Button className="p-2 bg-transparent text-purple-200 border-2 border-purple-400 text-lg font-medium rounded-lg hover:bg-purple-800 hover:bg-opacity-30 transition-colors">
+                        <Link href="/sign-in" className="px-10 py-2 bg-transparent text-white border-2 border-purple-400 text-lg font-medium rounded-lg hover:bg-purple-800 hover:bg-opacity-30 transition-colors">
                             Sign in
-                        </Button>
+                        </Link>
 
                         {/* Mobile Navigation */}
                         {/* {menuOpen && (

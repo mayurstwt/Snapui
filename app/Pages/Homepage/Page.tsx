@@ -1,10 +1,9 @@
 "use client"
 
 import { Montserrat } from 'next/font/google';
-import Link from 'next/link'; // Import Link from Next.js
+import Link from 'next/link';
 import ComponentCard from "@/app/components/ComponentCard";
 import { ComponentType, components } from '../../data/components';
-import NavbarComponent from '@/app/components/Navbar';
 import { useState } from 'react';
 
 // Initialize the Montserrat font
@@ -21,9 +20,10 @@ export default function HomePage() {
     return (
         <div className={`min-h-screen w-full bg-gradient-to-b from-black via-purple-900 to-black flex flex-col items-center justify-center px-4 md:px-8 lg:px-16 ${montserrat.variable} font-sans overflow-hidden`}>
             <div className="text-center max-w-7xl mx-auto z-10 mb-10 mt-44">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-8 text-white tracking-tight">
-                    <span className="block">Transform Experience</span>
-                    <span className="block mt-4">With Our Solution</span>
+                <h1 className="text-[3rem] md:text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-8 text-white tracking-wide leading-12 md:leading-14 lg:leading-20"> 
+                    <span className="hidden md:block">Transform Experience</span>
+                    <span className="hidden md:block mt-4">With Our Solution</span>
+                    <span className="block md:hidden mt-4">Transform Experience With Our Solution</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-purple-100 mb-12 max-w-2xl mx-auto">
                     Elevate your business with powerful tools designed for modern challenges.

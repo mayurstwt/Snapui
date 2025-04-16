@@ -9,7 +9,7 @@ import {
     Type,
     LucideIcon,
   } from "lucide-react";
-  import { cn } from "@/app/lib/utils";
+  import { cn } from "@/lib/lib/utils";
   
   const CreativeBento = () => {
     return (

@@ -28,7 +28,7 @@ function Components() {
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
               className="md:hidden text-indigo-400 hover:text-indigo-300 transition-colors absolute right-33 top-7"
             >
-              {isSidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isSidebarOpen ? <X className="w-6 h-6 text-purple-600" /> : <Menu className="text-purple-600 w-6 h-6" />}
             </button>
             <div className="w-6 md:hidden" /> {/* Spacer for centering */}
           </div>
@@ -63,7 +63,7 @@ function Components() {
           />
         </div>
 
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {getAllComponents().map((component, index) => (
             <ComponentCard
               key={index}

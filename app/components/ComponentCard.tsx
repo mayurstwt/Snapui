@@ -30,7 +30,7 @@ const ComponentCard: React.FC<ComponentCardProps> = ({
         <h3 className="text-xl text-white font-semibold mb-2">{title}</h3>
         <p className="text-neutral-100 mb-4">{description}</p>
         
-        <div className="flex gap-3">
+        <div className="flex flex-col md:flex-row gap-3">
           <a
             href={previewUrl}
             target="_blank"

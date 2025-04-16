@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { cn } from "@/app/lib/utils";
+import { cn } from "@/lib/lib/utils";
 import { Menu, X, ArrowRight, User, ShieldCheck, BookOpen, HeartPulse } from "lucide-react";
 
 const mainLinks = [
