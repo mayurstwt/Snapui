@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { cn } from "@/lib/lib/utils";
+import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown, Laptop, ShieldCheck, Server, Database } from "lucide-react";
 
 const mainLinks = [

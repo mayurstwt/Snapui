@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Menu, X, Search, ShoppingBag, User } from "lucide-react";
-import { cn } from "@/lib/lib/utils";
+import { cn } from "@/lib/utils";
 
 const navCategories = [
   { label: "New Arrivals", href: "#new" },
