@@ -1,19 +1,14 @@
-// SimpleNavbarOne.tsx
 "use client";
 
 import { useState, useEffect, useRef } from "react";
 import React, { HTMLAttributes } from 'react';
 import { cva } from "class-variance-authority";
 import Link from "next/link";
+import AuthButtons from "./AuthButtons";
 
-// const navLinks = [
-//     { label: "Solutions", href: "#solutions" },
-//     { label: "Products", href: "#products" },
-//     { label: "Developers", href: "#developers" },
-//     { label: "Resources", href: "#resources" },
-// ];
 
 export default function NavbarComponent() {
+    
     const [menuOpen, setMenuOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
 
@@ -39,7 +34,6 @@ export default function NavbarComponent() {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, [menuOpen]);
 
-    const handleMenuClick = () => setMenuOpen(false);
 
     return (
         <section className="fixed py-2 top-0 z-50 w-full">
@@ -51,72 +45,8 @@ export default function NavbarComponent() {
                         </div>
                         <span className="font-semibold text-white text-2xl ml-2">Snap UI</span>
                     </Link>
-
-                    {/* Desktop Navigation */}
-                    {/* <div className="lg:flex items-center justify-center hidden">
-                        <nav className="flex gap-8 font-medium text-zinc-300">
-                            {navLinks.map((link) => (
-                                <a
-                                    href={link.href}
-                                    key={link.label}
-                                    className="hover:text-blue-400 transition-colors duration-200"
-                                >
-                                    {link.label}
-                                </a>
-                            ))}
-                        </nav>
-                    </div> */}
-
-                    {/* Hamburger + Buttons */}
                     <div className="flex items-center gap-4 relative" ref={menuRef}>
-                        {/* <button
-                            className="lg:hidden text-zinc-400 hover:text-white transition-colors"
-                            onClick={() => setMenuOpen((prev) => !prev)}
-                            aria-label="Toggle Menu"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                {menuOpen ? (
-                                    <path d="M18 6L6 18M6 6l12 12" />
-                                ) : (
-                                    <>
-                                        <path d="M3 12h18" />
-                                        <path d="M3 6h18" />
-                                        <path d="M3 18h18" />
-                                    </>
-                                )}
-                            </svg>
-                        </button> */}
-
-                        <Link href="/sign-in" className="px-10 py-2 bg-transparent text-white border-2 border-purple-400 text-lg font-medium rounded-lg hover:bg-purple-800 hover:bg-opacity-30 transition-colors">
-                            Sign in
-                        </Link>
-
-                        {/* Mobile Navigation */}
-                        {/* {menuOpen && (
-                            <div className="absolute right-0 top-12 bg-zinc-900 border border-zinc-800 rounded-lg w-56 py-4 shadow-xl lg:hidden z-50">
-                                <nav className="flex flex-col">
-                                    {navLinks.map((link) => (
-                                        <a
-                                            href={link.href}
-                                            key={link.label}
-                                            className="px-5 py-2 hover:bg-zinc-800 text-zinc-300"
-                                            onClick={handleMenuClick}
-                                        >
-                                            {link.label}
-                                        </a>
-                                    ))}
-                                    <hr className="my-2 border-zinc-800" />
-                                    <div className="px-4 pt-2 space-y-2 ">
-                                        <Button variant="secondary" className="w-full block text-center" onClick={handleMenuClick}>
-                                            Sign in
-                                        </Button>
-                                        <Button variant="primary" className="w-full block text-center" onClick={handleMenuClick}>
-                                            Get started
-                                        </Button>
-                                    </div>
-                                </nav>
-                            </div>
-                        )} */}
+                        <AuthButtons />
                     </div>
                 </div>
             </div>
