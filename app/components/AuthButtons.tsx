@@ -1,5 +1,6 @@
 "use client";
 
+import { LogOut } from "lucide-react";
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
@@ -21,10 +22,10 @@ export default function AuthButtons() {
             {session ? (
                 <button
                     onClick={handleLogout}
-                    className="px-10 py-2 bg-purple-700 text-white text-lg font-medium rounded-lg hover:bg-purple-800 transition-colors disabled:opacity-50"
+                    className="px-7 py-2 bg-purple-700 text-white text-lg font-medium rounded-lg hover:bg-purple-800 transition-colors disabled:opacity-50"
                     disabled={loading}
                 >
-                    {loading ? "Signing out..." : "Logout"}
+                    {loading ? <LogOut /> : <LogOut />} 
                 </button>
             ) : (
                 <Link
