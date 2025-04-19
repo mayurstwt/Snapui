@@ -23,9 +23,9 @@ export default function HomePage() {
                 <h1 className="text-[3.7rem] md:text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-8 text-white tracking-wide leading-12 md:leading-14 lg:leading-20"> 
                     <span className="hidden md:block">Transform Experience</span>
                     <span className="hidden md:block mt-4">With Our Solution</span>
-                    <span className="block md:hidden mt-4 leading-14 tracking-wide">Transform Experience With Our Solution</span>
+                    <span className="block md:hidden text-start mt-4 leading-14 tracking-wide">Transform Experience With Our Solution</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-purple-100 mb-12 max-w-2xl mx-auto">
+                <p className="text-xl md:text-2xl text-purple-100 mb-12 max-w-2xl text-start md:mx-auto">
                     Elevate your business with powerful tools designed for modern challenges.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">

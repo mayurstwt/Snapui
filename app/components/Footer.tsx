@@ -7,16 +7,31 @@ const FooterComponent: React.FC = () => {
             <div className="container mx-auto max-w-7xl px-4 md:px-6">
                 {/* Company Name */}
                 <div className="text-center mb-10">
-                    <h1 className="text-[5rem] md:text-[10rem] lg:text-[16rem] font-extrabold text-white tracking-wide drop-shadow-[0_4px_10px_rgba(0,0,0,0.4)] mb-10 flex flex-wrap justify-center">
+                    <h1 className="text-[5rem] md:text-[10rem] lg:text-[16rem] font-extrabold text-white tracking-wide mb-10 flex flex-wrap justify-center">
                         {['S', 'N', 'A', 'P', ' ', 'U', 'I'].map((char, index) => (
                             <span
                                 key={index}
-                                className="transition-colors duration-300 hover:text-purple-500"
+                                className="relative transition-all duration-300 hover:text-purple-500 hover:translate-y-[-4px] hover:scale-105"
+                                style={{
+                                    textShadow: `
+          1px 1px 0 #444,
+          2px 2px 0 #444,
+          3px 3px 0 #333,
+          4px 4px 0 #333,
+          5px 5px 0 #222,
+          6px 6px 0 #111,
+          7px 7px 0 rgba(0,0,0,0.9)
+        `,
+                                    transform: "perspective(800px) rotateX(10deg) rotateY(-10deg) scale(1.05)",
+                                    display: 'inline-block',
+                                }}
                             >
                                 {char}
                             </span>
                         ))}
                     </h1>
+
+
 
                 </div>
 
