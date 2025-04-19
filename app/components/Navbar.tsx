@@ -40,10 +40,7 @@ export default function NavbarComponent() {
             <div className="mx-auto max-w-7xl px-4 xl:px-0">
                 <div className="flex justify-between px-4 items-center bg-black py-3 rounded-lg">
                     <Link className="flex items-center space-x-2" href="/">
-                        <div className="w-8 h-8 bg-violet-500 rounded-md flex items-center justify-center">
-                            <span className="font-bold text-white">S</span>
-                        </div>
-                        <span className="font-semibold text-white text-2xl ml-2">Snap UI</span>
+                        <span className="font-bold text-white text-3xl">Snap UI</span>
                     </Link>
                     <div className="flex items-center gap-4 relative" ref={menuRef}>
                         <AuthButtons />

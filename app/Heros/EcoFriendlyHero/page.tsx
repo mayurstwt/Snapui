@@ -50,7 +50,7 @@ const EcoFriendlyHero: React.FC = () => {
 
           <div className="absolute inset-1 rounded-xl overflow-hidden z-10">
             <Image
-              src="/placeholder.svg?height=720&width=1280"
+              src="https://res.cloudinary.com/damr9jzpb/image/upload/v1740925617/66fedc3fd1f116089b632302_hero-img_oh0pmp.webp"
               alt="Sustainable forest initiative"
               width={1280}
               height={720}

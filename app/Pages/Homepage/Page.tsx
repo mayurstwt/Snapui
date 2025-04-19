@@ -19,8 +19,9 @@ export default function HomePage() {
 
     return (
         <div className={`min-h-screen w-full bg-gradient-to-b from-black via-purple-900 to-black flex flex-col items-center justify-center px-4 md:px-8 lg:px-16 ${montserrat.variable} font-sans overflow-hidden`}>
+            
             <div className="text-center max-w-7xl mx-auto z-10 mb-10 mt-44">
-                <h1 className="text-[3.7rem] md:text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-8 text-white tracking-wide leading-12 md:leading-14 lg:leading-20"> 
+                <h1 className="text-[3.7rem] md:text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-8 text-white tracking-wide leading-12 md:leading-14 lg:leading-20">
                     <span className="hidden md:block">Transform Experience</span>
                     <span className="hidden md:block mt-4">With Our Solution</span>
                     <span className="block md:hidden text-start mt-4 leading-14 tracking-wide">Transform Experience With Our Solution</span>

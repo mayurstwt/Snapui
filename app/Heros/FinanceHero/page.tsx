@@ -51,7 +51,7 @@ const FinanceHero: React.FC = () => {
 
           <div className="absolute inset-1 rounded-sm overflow-hidden z-10">
             <Image
-              src="/placeholder.svg?height=720&width=1280"
+              src="https://res.cloudinary.com/damr9jzpb/image/upload/v1735402591/pexels-thisisengineering-3861963.jpg"
               alt="Financial dashboard"
               width={1280}
               height={720}
