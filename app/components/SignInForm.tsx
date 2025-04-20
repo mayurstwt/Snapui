@@ -60,9 +60,9 @@ const SignInForm = () => {
     <div className="w-full h-screen relative flex bg-gradient-to-b from-black via-purple-900 to-black dark:bg-black transition-colors duration-300">
       <div className="relative z-10 w-full md:w-1/2 flex items-center justify-center px-6 py-12">
         <div className="w-full max-w-md p-6 rounded-lg shadow-md bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800">
-        <h2 className="text-3xl font-extrabold text-center mb-6 bg-gradient-to-b from-purple-900  to-black bg-clip-text text-transparent">
-  Sign in to your account
-</h2>
+          <h2 className="text-3xl font-extrabold text-center mb-6 bg-gradient-to-b from-purple-900  to-black bg-clip-text text-transparent">
+            Sign in to your account
+          </h2>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <FormField
