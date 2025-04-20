@@ -26,10 +26,10 @@ function Components() {
           <div className="flex items-center justify-between">
             <button 
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              className="md:hidden text-indigo-400 hover:text-indigo-300 transition-colors absolute right-33 top-7">
+              className="md:hidden text-indigo-400 hover:text-indigo-300 transition-colors absolute right-[9.5rem] top-8">
               {isSidebarOpen ? <X className="w-6 h-6 text-purple-600" /> : <Menu className="text-purple-600 w-6 h-6" />}
             </button>
-            <div className="w-6 md:hidden" /> {/* Spacer for centering */}
+            <div className="w-6 md:hidden" /> 
           </div>
         </div>
       </header>

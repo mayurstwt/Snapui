@@ -5,6 +5,7 @@ import Link from 'next/link';
 import ComponentCard from "@/app/components/ComponentCard";
 import { ComponentType, components } from '../../data/components';
 import { useState } from 'react';
+import "@/app/globals.css";
 
 // Initialize the Montserrat font
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' });
@@ -19,21 +20,20 @@ export default function HomePage() {
 
     return (
         <div className={`min-h-screen w-full bg-gradient-to-b from-black via-purple-900 to-black flex flex-col items-center justify-center px-4 md:px-8 lg:px-16 ${montserrat.variable} font-sans overflow-hidden`}>
-            
-            <div className="text-center max-w-7xl mx-auto z-10 mb-10 mt-44">
+            <div className="text-center max-w-7xl mx-auto z-10 mb-10 mt-32 md:mt-44">
                 <h1 className="text-[3.7rem] md:text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-8 text-white tracking-wide leading-12 md:leading-14 lg:leading-20">
-                    <span className="hidden md:block">Transform Experience</span>
-                    <span className="hidden md:block mt-4">With Our Solution</span>
+                    <span className="hidden md:block">Build Faster with </span>
+                    <span className="hidden md:block mt-4">Modern Components</span>
                     <span className="block md:hidden text-start mt-4 leading-14 tracking-wide">Transform Experience With Our Solution</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-purple-100 mb-12 max-w-2xl text-start md:mx-auto">
-                    Elevate your business with powerful tools designed for modern challenges.
+                <p className="text-xl text-purple-100 mb-12 max-w-2xl text-center md:mx-auto">
+                    Browse, edit, and export clean, responsive UI blocks for any project.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                    <button className="px-10 py-3 bg-purple-600 text-white text-lg font-medium rounded-lg hover:bg-purple-700 transition-colors shadow-lg">
+                    <button className="big-btn-dark-purple">
                         Get Started
                     </button>
-                    <button className="px-10 py-3 bg-transparent text-purple-200 border-2 border-purple-400 text-lg font-medium rounded-lg hover:bg-purple-800 hover:bg-opacity-30 transition-colors">
+                    <button className="big-btn-fade-purple">
                         Watch Demo
                     </button>
                 </div>
@@ -54,7 +54,7 @@ export default function HomePage() {
                 {/* View More Button */}
                 <div className="text-center mt-12">
                     <Link href="/Pages/ComponentsPage">
-                        <button className="px-10 py-4 bg-purple-600 text-white text-lg font-medium rounded-lg hover:bg-purple-700 transition-colors shadow-lg">
+                        <button className="big-btn-dark-purple">
                             View More
                         </button>
                     </Link>

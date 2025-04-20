@@ -30,12 +30,12 @@ const ComponentCard: React.FC<ComponentCardProps> = ({
         <h3 className="text-xl text-white font-semibold mb-2">{title}</h3>
         <p className="text-neutral-100 mb-4">{description}</p>
         
-        <div className="flex flex-col md:flex-row gap-3">
+        <div className="flex flex-col gap-3">
           <a
             href={previewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 p-2 bg-purple-600 text-white text-lg font-medium rounded-lg hover:bg-purple-700 transition-colors shadow-lg"
+            className="flex-1 flex items-center justify-center gap-2 big-btn-dark-purple"
           >
             <Eye className="w-4 h-4" />
             Live Preview
@@ -45,7 +45,7 @@ const ComponentCard: React.FC<ComponentCardProps> = ({
             href={sourceUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 p-2 bg-transparent text-purple-200 border-2 border-purple-400 text-lg font-medium rounded-lg hover:bg-purple-800 hover:bg-opacity-30 transition-colors"
+            className="flex-1 flex items-center justify-center gap-2 bg-transparent text-purple-200 border-2 big-btn-fade-purple"
           >
             <Code2 className="w-4 h-4" />
             Source Code

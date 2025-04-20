@@ -71,17 +71,20 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="w-full h-screen flex bg-white dark:bg-black transition-colors duration-300">
-      <div className="hidden md:block md:w-1/2 h-full">
+    <div className="w-full h-screen relative flex bg-gradient-to-b from-black via-purple-900 to-black dark:bg-black transition-colors duration-300">
+      {/* Background Image - behind on mobile, side image on md+ */}
+      <div className="absolute inset-0 md:relative md:w-1/2 h-full z-0">
         <img
           src="https://res.cloudinary.com/damr9jzpb/image/upload/v1744733590/signup-image_fhhrg9.jpg"
           alt="Signup Side Illustration"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-20 md:opacity-100"
         />
       </div>
-      <div className="w-full md:w-1/2 flex items-center bg-gradient-to-b from-black via-purple-900 to-black justify-center px-6 py-12">
+
+      {/* Form Content */}
+      <div className="relative z-10 w-full md:w-1/2 flex items-center justify-center px-6 py-12">
         <div className="w-full max-w-md p-6 rounded-lg shadow-md bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800">
-          <h2 className="text-2xl font-bold text-center mb-6 text-gray-900 dark:text-gray-100">
+        <h2 className="text-3xl font-extrabold text-center mb-6 bg-gradient-to-b from-purple-900  to-black bg-clip-text text-transparent">
             Create your account
           </h2>
           <Form {...form}>
@@ -156,7 +159,7 @@ const SignUpForm = () => {
                   </FormItem>
                 )}
               />
-              <Button className="w-full mt-6" type="submit" disabled={loading}>
+              <Button className="w-full mt-6 big-btn-dark-purple" type="submit" disabled={loading}>
                 {loading ? 'Creating account...' : 'Sign up'}
               </Button>
             </form>
@@ -165,6 +168,7 @@ const SignUpForm = () => {
               or
             </div>
 
+            {/* Optional Google Sign Up */}
             {/* <GoogleSignInButton>Sign up with Google</GoogleSignInButton> */}
 
             <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-2">
@@ -176,9 +180,8 @@ const SignUpForm = () => {
           </Form>
         </div>
       </div>
-
-
     </div>
+
   );
 };
 

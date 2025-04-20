@@ -22,7 +22,7 @@ export default function AuthButtons() {
             {session ? (
                 <button
                     onClick={handleLogout}
-                    className="px-7 py-2 bg-purple-700 text-white text-lg font-medium rounded-lg hover:bg-purple-800 transition-colors disabled:opacity-50"
+                    className="big-btn-fade-purple"
                     disabled={loading}
                 >
                     {loading ? <LogOut /> : <LogOut />} 
@@ -30,7 +30,7 @@ export default function AuthButtons() {
             ) : (
                 <Link
                     href="/sign-in"
-                    className="px-10 py-2 bg-transparent text-white border-2 border-purple-400 text-lg font-medium rounded-lg hover:bg-purple-800 hover:bg-opacity-30 transition-colors"
+                    className="big-btn-dark-purple"
                 >
                     Sign in
                 </Link>

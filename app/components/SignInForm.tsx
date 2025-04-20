@@ -57,12 +57,12 @@ const SignInForm = () => {
   };
 
   return (
-    <div className="w-full h-screen flex bg-white dark:bg-black transition-colors duration-300">
-      <div className="w-full md:w-1/2 flex items-center bg-gradient-to-b from-black via-purple-900 to-black justify-center px-6 py-12">
+    <div className="w-full h-screen relative flex bg-gradient-to-b from-black via-purple-900 to-black dark:bg-black transition-colors duration-300">
+      <div className="relative z-10 w-full md:w-1/2 flex items-center justify-center px-6 py-12">
         <div className="w-full max-w-md p-6 rounded-lg shadow-md bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800">
-          <h2 className="text-2xl font-bold text-center mb-6 text-gray-900 dark:text-gray-100">
-            Sign in to your account
-          </h2>
+        <h2 className="text-3xl font-extrabold text-center mb-6 bg-gradient-to-b from-purple-900  to-black bg-clip-text text-transparent">
+  Sign in to your account
+</h2>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <FormField
@@ -100,7 +100,7 @@ const SignInForm = () => {
                   </FormItem>
                 )}
               />
-              <Button className="w-full mt-6" type="submit" disabled={loading}>
+              <Button className="w-full mt-6 big-btn-dark-purple" type="submit" disabled={loading}>
                 {loading ? 'Loading...' : 'Sign in'}
               </Button>
             </form>
@@ -123,15 +123,16 @@ const SignInForm = () => {
           </Form>
         </div>
       </div>
-
-      <div className="hidden md:block md:w-1/2 h-full">
+      <div className="absolute inset-0 md:relative md:w-1/2 h-full z-0">
         <img
           src="https://res.cloudinary.com/damr9jzpb/image/upload/v1744733591/login-image_gj9g7c.jpg"
           alt="Login Side Illustration"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-20 md:opacity-100"
         />
       </div>
     </div>
+
+
   );
 };
 
