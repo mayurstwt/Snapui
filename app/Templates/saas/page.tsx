@@ -9,6 +9,14 @@ import { Button } from "@/components/ui/button";
 
 import { LucideRocket, LucideHeart, LucideShield, LucideBolt, LucideStar, LucideLeaf } from 'lucide-react';
 
+
+const cardTitles = [
+    "Trusted Solution",
+    "Customer Satisfaction",
+    "Award-Winning Support",
+    "Reliable Performance"
+]
+
 const benefits = [
     {
         icon: <LucideRocket size={32} />,
@@ -62,7 +70,7 @@ const tiers = [
         monthly: "$19",
         yearly: "$190",
         description: "Ideal for teams and developers.",
-        features: ["All components", "5 users", "Email support"],
+        features: ["All components", "5 users", "Email support", "Priority support", "Premium support"],
         highlighted: true,
     },
     {
@@ -70,7 +78,7 @@ const tiers = [
         monthly: "$39",
         yearly: "$390",
         description: "Advanced tools for large teams.",
-        features: ["Unlimited access", "Unlimited users", "Priority support"],
+        features: ["Unlimited access", "Unlimited users", "Priority support", "Custom domain", "Premium support", "Custom domain", "Premium support"],
     },
 ];
 
@@ -121,14 +129,14 @@ export default function Saas() {
                 "py-4 sticky top-0 z-50 transition-all duration-300",
                 isScrolled ? "bg-teal/80 backdrop-blur-xl" : "bg-teal-50"
             )}>
-                <div className="mx-auto max-w-[100rem] ">
+                <div className="mx-auto max-w-[100rem]">
                     <div className={cn(
-                        "flex justify-between items-center px-4 rounded-2xl py-3 transition-all duration-300",
+                        "flex justify-between items-center px-8 rounded-2xl py-3 transition-all duration-300",
                         isScrolled ? "bg-teal-100 lg:mx-20 px-3 mx-2" : "bg-transparent"
                     )}>
                         <div className="flex items-center">
                             <span className="font-bold flex items-center gap-2 text-[3rem] text-teal-900 tracking-tight">
-                               <FlameKindling className="w-8 h-8"/> Cosmos
+                                <FlameKindling className="w-8 h-8" /> Cosmos
                             </span>
                         </div>
 
@@ -173,7 +181,7 @@ export default function Saas() {
 
                             {/* Mobile Navigation */}
                             {menuOpen && (
-                                <div className="absolute right-0 top-16 bg-teal-800 backdrop-blur-xl border border-white/10 rounded-xl w-64 py-5 px-4 shadow-lg lg:hidden z-50">
+                                <div className="absolute right-0 top-16 bg-teal-900 backdrop-blur-xl border border-white/10 rounded-xl w-64 py-5 px-4 shadow-lg lg:hidden z-50">
                                     <nav className="flex flex-col gap-4">
                                         {navLinks.map((link) => (
                                             <a
@@ -187,14 +195,14 @@ export default function Saas() {
                                             </a>
                                         ))}
                                         <hr className="my-1 border-white/10" />
-                                        <Button className="w-full px-10 py-4 bg-teal-600 text-white text-lg font-medium rounded-full hover:bg-teal-700 transition-colors shadow-lg gap-2" onClick={handleMenuClick}>
-                                            <LogIn className="w-4 h-4" />
+                                        <button className="flex px-10 py-4 bg-teal-600 text-white text-lg font-medium rounded-full hover:text-white transition-colors shadow-lg items-center gap-2">
+                                            <LogIn className="w-5 h-5 " />
                                             Log in
-                                        </Button>
-                                        <Button className="w-full px-10 py-4 bg-teal-600 text-white text-lg font-medium rounded-full hover:bg-teal-700 transition-colors shadow-lg gap-2" onClick={handleMenuClick}>
-                                            <User className="w-4 h-4" />
+                                        </button>
+                                        <button className="flex px-10 py-4 bg-transparent text-teal-500 border-2 border-teal-400 text-lg font-medium rounded-full hover:bg-teal-100 transition-colors shadow-lg items-center gap-2">
+                                            <User className="w-5 h-5" />
                                             Sign up
-                                        </Button>
+                                        </button>
                                     </nav>
                                 </div>
                             )}
@@ -214,11 +222,11 @@ export default function Saas() {
                 <div className="absolute bottom-20 right-20 w-60 h-60 rounded-full bg-teal-200 opacity-30 z-0 pointer-events-none"></div>
 
                 <div
-                    className={`py-32 max-w-[100rem] px-4 mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12 ${quicksand.variable} font-sans`}
+                    className={`py-20 md:py-32 max-w-[100rem] px-8 mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12 ${quicksand.variable} font-sans`}
                 >
                     {/* Left Content */}
                     <div className="text-start max-w-3xl z-10">
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-teal-900 tracking-tight">
+                        <h1 className="text-6xl lg:text-7xl font-bold mb-8 text-teal-900 tracking-tight">
                             <span className="block">Find Your Balance</span>
                             <span className="block mt-4">Nurture Your Wellbeing</span>
                         </h1>
@@ -257,7 +265,7 @@ export default function Saas() {
 
 
             <section className="py-12 bg-gradient-to-b from-white to-teal-100">
-                <div className="max-w-[100rem] px-4 mx-auto">
+                <div className="max-w-[100rem] px-8 mx-auto">
                     <div className="text-center mb-10">
                         <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-teal-900 tracking-tight">Why Choose Us</h2>
                         <p className="text-xl md:text-2xl text-teal-700 mb-12 max-w-2xl mx-auto mt-2">
@@ -373,31 +381,35 @@ export default function Saas() {
 
 
             <section className="py-20 px-4 sm:px-8 md:px-16 lg:px-24 bg-gradient-to-b from-teal-100 relative overflow-hidden">
-                <div className="max-w-[100rem] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center border-2 p-20 border-teal-500 rounded-xl">
+                <div className="max-w-[100rem] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center border-2 p-5 md:p-20 border-teal-500 rounded-xl hover:bg-white transition-colors duration-500 ease-in-out ">
                     {/* Left Side */}
                     <div className="text-center lg:text-left">
-                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-teal-900 tracking-tight">Why Choose Us</h2>
+                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-teal-900 tracking-tight mt-10 md:mt-0">Why Choose Us</h2>
                         <p className="text-xl md:text-2xl text-teal-700 mb-8 max-w-2xl mx-auto mt-2">
                             Discover the unique benefits that make our solution stand out from the rest.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <button className="px-6 py-3 rounded-xl text-white bg-teal-500 hover:bg-teal-600 transition font-medium">
-                                Get Started
-                            </button>
-                            <button className="px-6 py-3 rounded-xl border border-teal-500 text-teal-500 hover:bg-teal-100 transition font-medium">
+
+                            <button className=" px-10 py-4 md:w-fit bg-teal-600 text-white text-lg font-medium rounded-full hover:bg-teal-700 transition-colors shadow-lg">
                                 Learn More
+                            </button>
+                            <button className="px-10 py-4 bg-transparent text-teal-700 border-2 border-teal-400 text-lg font-medium rounded-full hover:bg-teal-100 transition-colors shadow-lg">
+                                Get Started
                             </button>
                         </div>
                     </div>
 
+
+
                     {/* Right Side */}
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {[1, 2, 3, 4].map((_, i) => (
+                        {cardTitles.map((title, i) => (
                             <div
                                 key={i}
                                 className="bg-teal-400/10 border border-teal-300/50 rounded-2xl p-6 flex flex-col items-center text-center shadow-md"
                             >
-                                <div className="text-teal-500 mb-4">
+                                <div className="text-teal-500 mb-4 bg-white rounded-full p-1">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="h-8 w-8"
@@ -408,8 +420,8 @@ export default function Saas() {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                     </svg>
                                 </div>
-                                <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
-                                    Trusted Solution
+                                <h3 className="text-teal-900 tracking-tight text-2xl font-semibold mb-2">
+                                    {title}
                                 </h3>
                                 <div className="flex justify-center gap-1 text-yellow-400 mb-2">
                                     {Array(5)
@@ -418,7 +430,7 @@ export default function Saas() {
                                             <svg
                                                 key={idx}
                                                 xmlns="http://www.w3.org/2000/svg"
-                                                className="h-4 w-4"
+                                                className="h-5 w-5"
                                                 fill="currentColor"
                                                 viewBox="0 0 20 20"
                                             >
@@ -435,63 +447,40 @@ export default function Saas() {
 
             <footer className="bg-gradient-to-t from-white to-teal-50 dark:from-gray-900 dark:to-teal-900 pt-12">
                 <div className="max-w-[100rem] mx-auto px-6 md:px-12">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-teal-200 dark:border-teal-800 pb-10">
+                    <div className="flex flex-col md:flex-row justify-between gap-10 border-b border-teal-200 dark:border-teal-800 pb-10">
 
                         {/* Brand + Tagline */}
                         <div>
-                            <h2 className="text-2xl font-bold text-teal-700 dark:text-teal-400 mb-3">YourCompany</h2>
-                            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                            <h2 className="text-5xl font-bold text-teal-700 dark:text-teal-400 mb-3">Cosmos</h2>
+                            <p className="text-lg max-w-md text-gray-600 dark:text-gray-300 leading-relaxed">
                                 Building beautiful experiences, one pixel at a time. Join the digital revolution.
                             </p>
                         </div>
 
-                        {/* Explore Links */}
-                        <div>
-                            <h3 className="text-lg font-semibold text-teal-600 dark:text-teal-300 mb-4">Explore</h3>
-                            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                                {["Home", "Features", "Pricing", "Blog"].map((item) => (
-                                    <li key={item}>
-                                        <a href="#" className="hover:text-teal-500 transition-all duration-200">{item}</a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        {/* Resources Links */}
-                        <div>
-                            <h3 className="text-lg font-semibold text-teal-600 dark:text-teal-300 mb-4">Resources</h3>
-                            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                                {["Docs", "Support", "Privacy Policy", "Terms"].map((item) => (
-                                    <li key={item}>
-                                        <a href="#" className="hover:text-teal-500 transition-all duration-200">{item}</a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        {/* Contact Info */}
-                        <div>
-                            <h3 className="text-lg font-semibold text-teal-600 dark:text-teal-300 mb-4">Contact</h3>
-                            <p className="text-sm mb-2">support@yourcompany.com</p>
-                            <p className="text-sm mb-2">+91 12345 67890</p>
-                            <div className="flex gap-3 mt-4">
-                                {[
-                                    { name: "Twitter", href: "#", icon: "🐦" },
-                                    { name: "LinkedIn", href: "#", icon: "💼" },
-                                    { name: "GitHub", href: "#", icon: "💻" },
-                                ].map(({ name, href, icon }) => (
-                                    <a
-                                        key={name}
-                                        href={href}
-                                        aria-label={name}
-                                        className="w-9 h-9 rounded-full bg-teal-100 dark:bg-teal-800 text-teal-700 dark:text-white flex items-center justify-center hover:scale-110 hover:bg-teal-200 dark:hover:bg-teal-700 transition-all duration-300"
-                                    >
-                                        <span className="text-lg">{icon}</span>
-                                    </a>
-                                ))}
+                        {/* Contact Info + Newsletter */}
+                        <div className="flex items-start justify-between gap-12">
+                            <div>
+                                <h3 className="text-3xl font-semibold text-teal-600 dark:text-teal-300 mb-4">Contact</h3>
+                                <p className="text-md mb-2">support@yourcompany.com</p>
+                                <p className="text-md mb-2">+91 12345 67890</p>
+                                <div className="flex gap-3 mt-4">
+                                    {[
+                                        { name: "Twitter", href: "#", icon: "🐦" },
+                                        { name: "LinkedIn", href: "#", icon: "💼" },
+                                        { name: "GitHub", href: "#", icon: "💻" },
+                                    ].map(({ name, href, icon }) => (
+                                        <a
+                                            key={name}
+                                            href={href}
+                                            aria-label={name}
+                                            className="w-12 h-12 rounded-full bg-teal-100 dark:bg-teal-800 text-teal-700 dark:text-white flex items-center justify-center hover:scale-110 hover:bg-teal-200 dark:hover:bg-teal-700 transition-all duration-300"
+                                        >
+                                            <span className="text-lg">{icon}</span>
+                                        </a>
+                                    ))}
+                                </div>
                             </div>
                         </div>
-
                     </div>
 
                     {/* Bottom Row */}
@@ -501,6 +490,7 @@ export default function Saas() {
                     </div>
                 </div>
             </footer>
+
 
 
 
