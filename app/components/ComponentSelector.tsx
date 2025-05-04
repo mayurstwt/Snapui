@@ -10,8 +10,8 @@ interface ComponentSelectorProps {
 const types: { type: ComponentType; label: string }[] = [
   { type: 'all', label: 'All Components' },
   { type: 'navbar', label: 'Navigation' },
-  { type: 'hero', label: 'Hero Sections' },
-  { type: 'about', label: 'About Us' },
+  { type: 'hero', label: 'Hero' },
+  { type: 'bento', label: 'Bento' },
   { type: 'contact', label: 'Contact' },
   { type: 'footer', label: 'Footer' },
   // { type: 'testimonials', label: 'Testimonials' },

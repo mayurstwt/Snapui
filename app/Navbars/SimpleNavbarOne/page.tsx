@@ -40,7 +40,7 @@ export default function SimpleNavbarOne() {
   const handleMenuClick = () => setMenuOpen(false);
 
   return (
-    <section className="fixed py-2 top-0 z-50 w-full">
+    <section className="py-2 top-0 z-50 w-full">
       <div className="mx-auto px-6 md:px-10 max-w-6xl">
         <div className="flex justify-between items-center bg-black/80 backdrop-blur-md border-b border-zinc-800 py-3 px-5 rounded-lg">
           <div className="flex items-center space-x-2">

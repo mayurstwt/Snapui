@@ -1,4 +1,4 @@
-export type ComponentType = 'all' | 'navbar' | 'hero' | 'about' | 'contact' | 'footer';
+export type ComponentType = 'all' | 'navbar' | 'hero' | 'bento' | 'contact' | 'footer';
 
 interface Component {
   title: string;
@@ -125,7 +125,7 @@ export const components: Record<Exclude<ComponentType, 'all'>, Component[]> = {
       sourceUrl: 'https://github.com/mayurstwt/Snapui/tree/main/app/Heros/WellnessHero',
     }
   ],
-  about: [
+  bento: [
     {
       title: 'Team Grid',
       description: 'Display your team members in a responsive grid.',

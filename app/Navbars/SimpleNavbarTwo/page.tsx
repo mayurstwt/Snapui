@@ -67,7 +67,7 @@ export default function SimpleNavbarTwo() {
 
   return (
     <section className={cn(
-      "py-4 sticky top-0 z-50 transition-all duration-300",
+      "py-4 z-50 transition-all duration-300",
       isScrolled ? "bg-black/80 backdrop-blur-xl" : "bg-transparent"
     )}>
       <div className="mx-auto px-4 sm:px-8 lg:px-16 max-w-7xl">
